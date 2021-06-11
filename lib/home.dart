@@ -18,14 +18,14 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   String _url = "None";
-  String _location = "here";
+  String _message = "Null";
   bool _success = false;
 
   Future<void> check() async {
     Tuple2<bool, String> t = await Api.checkin(_url);
     setState(() {
       _success = t.item1;
-      _location = t.item2;
+      _message = t.item2;
     });
   }
 
@@ -122,7 +122,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               if (_success) {
                                 Navigator.push(
                                     context,
-                                    MaterialPageRoute(builder: (context) => RecordSuccess(location: _location)),
+                                    MaterialPageRoute(builder: (context) => RecordSuccess(message: _message)),
                                 );
                               } else {
                                 showDialog<String>(

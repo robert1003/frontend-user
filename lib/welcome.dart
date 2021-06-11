@@ -15,9 +15,9 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
     await Future.delayed(Duration(seconds: 1));
     var secureStorage = new FlutterSecureStorage();
     print(await secureStorage.readAll());
-    final haveCookie = await secureStorage.containsKey(key: 'cookie');
+    final haveToken = await secureStorage.containsKey(key: 'token');
     final haveAccount = await secureStorage.containsKey(key: 'username');
-    if (haveCookie && haveAccount) {
+    if (haveToken && haveAccount) {
       Navigator.pushNamed(context, '/home');
     } else {
       Navigator.pushNamed(context, '/auth');
