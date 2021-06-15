@@ -42,6 +42,7 @@ class AuthSigninScreen extends StatelessWidget {
                     filled: true,
                     isDense: true,
                   ),
+                  obscureText: true,
                   controller: _passwordController,
                   autocorrect: false,
                   validator: (String? value) {
@@ -137,6 +138,7 @@ class AuthSignupScreen extends StatelessWidget {
                     filled: true,
                     isDense: true,
                   ),
+                  obscureText: true,
                   controller: _passwordController,
                   autocorrect: false,
                   validator: (String? value) {
