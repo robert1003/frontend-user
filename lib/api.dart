@@ -24,9 +24,10 @@ class Api {
       final response = await http.post(url, headers: headers, body: json);
       if (response.statusCode != 200) throw Exception("something went wrong");
       Map<String, dynamic> result = jsonDecode(response.body);
-      String time = DateFormat("yyyy-MM-dd HH:mm:ss").format(DateTime.fromMillisecondsSinceEpoch(result['Time']*1000));
-      String storeId = result['StoreId'];
-      return Tuple2<bool, String>(true, 'Successfully checked in at ${storeId} at ${time}.');
+      print("checkin : ");
+      print(result);
+      String time = DateFormat("yyyy-MM-dd HH:mm:ss").format(DateTime.fromMillisecondsSinceEpoch(result['time']*1000));
+      return Tuple2<bool, String>(true, 'Successfully checked in at ${result['store_name']} at ${time}.');
     } on Exception catch (e) {
       return Tuple2<bool, String>(false, 'Something went wrong');
     }

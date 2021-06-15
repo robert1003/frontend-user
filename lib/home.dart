@@ -139,10 +139,11 @@ class _HomeScreenState extends State<HomeScreen> {
                                   ),
                                 );
                               }
+
                             },
                             child: Text('Scan QR Code')),
-                        Text('Scan result : $_url\n',
-                            style: TextStyle(fontSize: 20))
+                        //Text('Scan result : $_url\n',
+                        //    style: TextStyle(fontSize: 20))
                       ]
                   )
               );}
