@@ -2,9 +2,13 @@
 
 A new Flutter project.
 
-## Getting Started
+## Environment
 
-This project is a starting point for a Flutter application.
+I used android studio with flutter plugin for development.
+
+This app is tested on iPhone SE2 with iOS 14.
+
+## Getting Started
 
 A few resources to get you started if this is your first Flutter project:
 
